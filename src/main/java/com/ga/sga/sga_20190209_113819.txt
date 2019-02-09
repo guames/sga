@@ -1,0 +1,4 @@
+WARNING - 11:38:20: First conversion pass
+WARNING - 11:38:21: Second pass : generating package usages
+WARNING - 11:38:21: Saving uml file /resource/sga/src/main/java/com/ga/sga/sga.uml
+WARNING - 11:38:21: Uml file /resource/sga/src/main/java/com/ga/sga/sga.uml saved
