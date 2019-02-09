@@ -8,17 +8,17 @@ import java.util.List;
 @Repository
 public class UsuariosDaoImpl implements UsuariosDao {
 
+    public List<Usuario> listarUsuario(){
+        //TODO listar usuario
+        return new ArrayList<>();
+    }
+
     public Usuario salvarUsuario(Usuario usuario){
         //TODO salvar usuario
         return new Usuario();
     }
 
-    public void removerUsuario(Usuario usuario){
+    public void removerUsuario(Long id){
         //TODO remover usuario
-    }
-
-    public List<Usuario> listarUsuario(){
-        //TODO listar usuario
-        return new ArrayList<>();
     }
 }

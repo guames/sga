@@ -5,7 +5,6 @@ import com.ga.sga.domain.HorarioDisponivel;
 import com.ga.sga.exception.SGAServiceException;
 import com.ga.sga.service.HorariosService;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 
 @RestController("/horarios")
@@ -18,41 +17,41 @@ public class HorariosController {
     }
 
     @GetMapping("/disponiveis")
-    public List<HorarioDisponivel> listarReceita() throws SGAServiceException {
+    public List<HorarioDisponivel> listarHorarioDisponivel() throws SGAServiceException {
         return hService.listarHorarioDisponivel();
     }
 
-    @PutMapping("/horarioDisponivel")
+    @PutMapping("/disponivel")
     public HorarioDisponivel cadastrarHorarioDisponivel(HorarioDisponivel horarioDisponivel) throws SGAServiceException {
         return hService.salvarHorarioDisponivel(horarioDisponivel);
     }
 
-    @PostMapping("/horarioDisponivel")
-    public HorarioDisponivel salvarHorarioDisponivel(HorarioDisponivel horarioDisponivel) throws SGAServiceException {
+    @PostMapping("/disponivel")
+    public HorarioDisponivel atualizarHorarioDisponivel(HorarioDisponivel horarioDisponivel) throws SGAServiceException {
         return hService.salvarHorarioDisponivel(horarioDisponivel);
     }
 
-    @DeleteMapping("/horarioDisponivel/{id}")
+    @DeleteMapping("/disponivel/{id}")
     public void removerHorarioDisponivel(@RequestParam Long id) throws SGAServiceException {
         hService.removerHorarioDisponivel(id);
     }
 
-    @GetMapping("/horarioAgendado")
+    @GetMapping("/agendados")
     public List<HorarioAgendado> listarHorarioAgendado() throws SGAServiceException {
         return hService.listarHorarioAgendado();
     }
 
-    @PutMapping("/horarioAgendado")
+    @PutMapping("/agendado")
     public HorarioAgendado cadastrarHorarioAgendado(HorarioAgendado horarioAgendado) throws SGAServiceException {
         return hService.salvarHorarioAgendado(horarioAgendado);
     }
 
-    @PostMapping("/horarioAgendado")
-    public HorarioAgendado salvarHorarioAgendado(HorarioAgendado horarioAgendado) throws SGAServiceException {
+    @PostMapping("/agendado")
+    public HorarioAgendado atualizarHorarioAgendado(HorarioAgendado horarioAgendado) throws SGAServiceException {
         return hService.salvarHorarioAgendado(horarioAgendado);
     }
 
-    @DeleteMapping("/horarioAgendado/{id}")
+    @DeleteMapping("/agendado/{id}")
     public void removerHorarioAgendado(@RequestParam Long id) throws SGAServiceException {
         hService.removerHorarioAgendado(id);
     }

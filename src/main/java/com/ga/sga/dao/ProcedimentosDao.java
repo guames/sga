@@ -5,9 +5,9 @@ import java.util.List;
 
 public interface ProcedimentosDao {
 
+    List<Procedimento> listarProcedimento();
+
     Procedimento salvarProcedimento(Procedimento procedimento);
 
-    void removerProcedimento(Procedimento procedimento);
-
-    List<Procedimento> listarProcedimento();
+    void removerProcedimento(Long id);
 }

@@ -4,7 +4,6 @@ import com.ga.sga.dao.ProcedimentosDao;
 import com.ga.sga.domain.Procedimento;
 import com.ga.sga.exception.SGAServiceException;
 import org.springframework.stereotype.Service;
-
 import java.util.List;
 
 @Service
@@ -16,6 +15,14 @@ public class ProcedimentosServiceImpl implements ProcedimentosService{
         this.pDao = pDao;
     }
 
+    public List<Procedimento> listarProcedimento() throws SGAServiceException {
+        try {
+            return pDao.listarProcedimento();
+        } catch (Exception e) {
+            throw new SGAServiceException();
+        }
+    }
+
     public Procedimento salvarProcedimento(Procedimento procedimento) throws SGAServiceException {
         try {
             return pDao.salvarProcedimento(procedimento);
@@ -24,17 +31,9 @@ public class ProcedimentosServiceImpl implements ProcedimentosService{
         }
     }
 
-    public void removerProcedimento(Procedimento procedimento) throws SGAServiceException {
+    public void removerProcedimento(Long id) throws SGAServiceException {
         try {
-            pDao.removerProcedimento(procedimento);
-        } catch (Exception e) {
-            throw new SGAServiceException();
-        }
-    }
-
-    public List<Procedimento> listarProcedimento() throws SGAServiceException {
-        try {
-            return pDao.listarProcedimento();
+            pDao.removerProcedimento(id);
         } catch (Exception e) {
             throw new SGAServiceException();
         }

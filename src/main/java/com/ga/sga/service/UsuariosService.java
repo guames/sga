@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface UsuariosService {
 
+    List<Usuario> listarUsuario() throws SGAServiceException;
+
     Usuario salvarUsuario(Usuario usuario) throws SGAServiceException;
 
-    void removerUsuario(Usuario usuario) throws SGAServiceException;
-
-    List<Usuario> listarUsuario() throws SGAServiceException;
+    void removerUsuario(Long id) throws SGAServiceException;
 }

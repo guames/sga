@@ -18,6 +18,11 @@ public class FinancasController {
         this.fService = fService;
     }
 
+    @GetMapping("/relatorio")
+    public List<RelatorioFinancasDTO> relatorio(Date dataInicial, Date dataFinal) throws SGAServiceException {
+        return fService.relatorioFinancas(dataInicial, dataFinal);
+    }
+
     @GetMapping("/receitas")
     public List<Receita> listarReceita() throws SGAServiceException {
         return fService.listarReceitas();
@@ -29,7 +34,7 @@ public class FinancasController {
     }
 
     @PostMapping("/receita")
-    public Receita salvarReceita(Receita receita) throws SGAServiceException {
+    public Receita atualizarReceita(Receita receita) throws SGAServiceException {
         return fService.salvarReceita(receita);
     }
 
@@ -49,17 +54,12 @@ public class FinancasController {
     }
 
     @PostMapping("/despesa")
-    public Despesa salvarDespesa(Despesa despesa) throws SGAServiceException {
+    public Despesa atualizarDespesa(Despesa despesa) throws SGAServiceException {
         return fService.salvarDespesa(despesa);
     }
 
     @DeleteMapping("/despesa/{id}")
     public void removerDespesa(@RequestParam Long id) throws SGAServiceException {
         fService.removerDespesa(id);
-    }
-
-    @GetMapping("/relatorio")
-    public List<RelatorioFinancasDTO> relatorio(Date dataInicial, Date dataFinal) throws SGAServiceException {
-        return fService.relatorioFinancas(dataInicial, dataFinal);
     }
 }

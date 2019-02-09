@@ -15,6 +15,14 @@ public class UsuariosServiceImpl implements UsuariosService{
         this.uDao = uDao;
     }
 
+    public List<Usuario> listarUsuario() throws SGAServiceException {
+        try {
+            return uDao.listarUsuario();
+        } catch (Exception e) {
+            throw new SGAServiceException();
+        }
+    }
+
     public Usuario salvarUsuario(Usuario usuario) throws SGAServiceException {
         try {
             return uDao.salvarUsuario(usuario);
@@ -23,17 +31,9 @@ public class UsuariosServiceImpl implements UsuariosService{
         }
     }
 
-    public void removerUsuario(Usuario usuario) throws SGAServiceException {
+    public void removerUsuario(Long id) throws SGAServiceException {
         try {
-            uDao.removerUsuario(usuario);
-        } catch (Exception e) {
-            throw new SGAServiceException();
-        }
-    }
-
-    public List<Usuario> listarUsuario() throws SGAServiceException {
-        try {
-            return uDao.listarUsuario();
+            uDao.removerUsuario(id);
         } catch (Exception e) {
             throw new SGAServiceException();
         }
