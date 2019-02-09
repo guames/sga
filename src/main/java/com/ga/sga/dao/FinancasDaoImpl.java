@@ -12,17 +12,27 @@ import java.util.List;
 @Repository
 public class FinancasDaoImpl implements FinancasDao {
 
+    public List<RelatorioFinancasDTO> relatorioFinancas(Date dataInicial, Date dataFinal) {
+        //TODO listar relatorio
+        return new ArrayList<>();
+    }
+
+    public List<Despesa> listarDespesa() {
+        //TODO listar despesas
+        return new ArrayList<>();
+    }
+
     public Despesa salvarDespesa(Despesa despesa) {
         //TODO cadastrar despesa
         return new Despesa();
     }
 
-    public void removerDespesa(Despesa despesa) {
+    public void removerDespesa(Long id) {
         //TODO remover despesa
     }
 
-    public List<Despesa> listarDespesa() {
-        //TODO listar despesas
+    public List<Receita> listarReceita() {
+        //TODO listar receitas
         return new ArrayList<>();
     }
 
@@ -31,17 +41,7 @@ public class FinancasDaoImpl implements FinancasDao {
         return new Receita();
     }
 
-    public void removerReceita(Receita receita) {
+    public void removerReceita(Long id) {
         //TODO remover receita
-    }
-
-    public List<Receita> listarReceita() {
-        //TODO listar receitas
-        return new ArrayList<>();
-    }
-
-    public List<RelatorioFinancasDTO> relatorioFinancas(Date dataInicial, Date dataFinal) {
-        //TODO listar relatorio
-        return new ArrayList<>();
     }
 }
