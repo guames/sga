@@ -22,7 +22,7 @@ public class FinancasServiceImpl implements FinancasService {
         try {
             return fDao.relatorioFinancas(dataInicial, dataFinal);
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 
@@ -30,7 +30,7 @@ public class FinancasServiceImpl implements FinancasService {
         try {
             return fDao.listarDespesa();
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 
@@ -38,7 +38,7 @@ public class FinancasServiceImpl implements FinancasService {
         try {
             return fDao.salvarDespesa(despesa);
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 
@@ -46,7 +46,7 @@ public class FinancasServiceImpl implements FinancasService {
         try {
             fDao.removerDespesa(id);
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 
@@ -54,7 +54,7 @@ public class FinancasServiceImpl implements FinancasService {
         try {
             return fDao.listarReceita();
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 
@@ -62,7 +62,7 @@ public class FinancasServiceImpl implements FinancasService {
         try {
             return fDao.salvarReceita(receita);
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 
@@ -70,7 +70,7 @@ public class FinancasServiceImpl implements FinancasService {
         try {
             fDao.removerReceita(id);
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 }

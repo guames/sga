@@ -19,7 +19,7 @@ public class UsuariosServiceImpl implements UsuariosService{
         try {
             return uDao.listarUsuario();
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 
@@ -27,7 +27,7 @@ public class UsuariosServiceImpl implements UsuariosService{
         try {
             return uDao.salvarUsuario(usuario);
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 
@@ -35,7 +35,7 @@ public class UsuariosServiceImpl implements UsuariosService{
         try {
             uDao.removerUsuario(id);
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 }

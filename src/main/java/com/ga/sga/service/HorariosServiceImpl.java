@@ -20,7 +20,7 @@ public class HorariosServiceImpl implements HorariosService{
         try {
             return hDao.listarHorarioAgendado();
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 
@@ -28,7 +28,7 @@ public class HorariosServiceImpl implements HorariosService{
         try {
             return hDao.salvarHorarioAgendado(horarioAgendado);
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 
@@ -36,7 +36,7 @@ public class HorariosServiceImpl implements HorariosService{
         try {
             hDao.removerHorarioAgendado(id);
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 
@@ -44,7 +44,7 @@ public class HorariosServiceImpl implements HorariosService{
         try {
             return hDao.listarHorarioDisponivel();
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 
@@ -52,7 +52,7 @@ public class HorariosServiceImpl implements HorariosService{
         try {
             return hDao.salvarHorarioDisponivel(horarioDisponivel);
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 
@@ -60,7 +60,7 @@ public class HorariosServiceImpl implements HorariosService{
         try {
             hDao.removerHorarioDisponivel(id);
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 }

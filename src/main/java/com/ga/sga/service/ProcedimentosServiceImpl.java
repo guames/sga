@@ -19,7 +19,7 @@ public class ProcedimentosServiceImpl implements ProcedimentosService{
         try {
             return pDao.listarProcedimento();
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 
@@ -27,7 +27,7 @@ public class ProcedimentosServiceImpl implements ProcedimentosService{
         try {
             return pDao.salvarProcedimento(procedimento);
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 
@@ -35,7 +35,7 @@ public class ProcedimentosServiceImpl implements ProcedimentosService{
         try {
             pDao.removerProcedimento(id);
         } catch (Exception e) {
-            throw new SGAServiceException();
+            throw new SGAServiceException(e.getMessage());
         }
     }
 }
