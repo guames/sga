@@ -2,9 +2,11 @@ package com.ga.sga.controller;
 
 import com.ga.sga.domain.Despesa;
 import com.ga.sga.domain.Receita;
+import com.ga.sga.dto.RelatorioFinancasDTO;
 import com.ga.sga.exception.SGAServiceException;
 import com.ga.sga.service.FinancasService;
 import org.springframework.web.bind.annotation.*;
+import java.util.Date;
 import java.util.List;
 
 @RestController("/financas")
@@ -54,5 +56,10 @@ public class FinancasController {
     @DeleteMapping("/despesa/{id}")
     public void removerDespesa(@RequestParam Long id) throws SGAServiceException {
         fService.removerDespesa(id);
+    }
+
+    @GetMapping("/relatorio")
+    public List<RelatorioFinancasDTO> relatorio(Date dataInicial, Date dataFinal) throws SGAServiceException {
+        return fService.relatorioFinancas(dataInicial, dataFinal);
     }
 }

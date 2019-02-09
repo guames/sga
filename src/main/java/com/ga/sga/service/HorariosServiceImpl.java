@@ -16,6 +16,14 @@ public class HorariosServiceImpl implements HorariosService{
         this.hDao = hDao;
     }
 
+    public List<HorarioAgendado> listarHorarioAgendado() throws SGAServiceException {
+        try {
+            return hDao.listarHorarioAgendado();
+        } catch (Exception e) {
+            throw new SGAServiceException();
+        }
+    }
+
     public HorarioAgendado salvarHorarioAgendado(HorarioAgendado horarioAgendado) throws SGAServiceException {
         try {
             return hDao.salvarHorarioAgendado(horarioAgendado);
@@ -24,17 +32,17 @@ public class HorariosServiceImpl implements HorariosService{
         }
     }
 
-    public void removerHorarioAgendado(HorarioAgendado horarioAgendado) throws SGAServiceException {
+    public void removerHorarioAgendado(Long id) throws SGAServiceException {
         try {
-            hDao.removerHorarioAgendado(horarioAgendado);
+            hDao.removerHorarioAgendado(id);
         } catch (Exception e) {
             throw new SGAServiceException();
         }
     }
 
-    public List<HorarioAgendado> listarHorarioAgendado() throws SGAServiceException {
+    public List<HorarioDisponivel> listarHorarioDisponivel() throws SGAServiceException {
         try {
-            return hDao.listarHorarioAgendado();
+            return hDao.listarHorarioDisponivel();
         } catch (Exception e) {
             throw new SGAServiceException();
         }
@@ -48,17 +56,9 @@ public class HorariosServiceImpl implements HorariosService{
         }
     }
 
-    public void removerHorarioDisponivel(HorarioDisponivel horarioDisponivel) throws SGAServiceException {
+    public void removerHorarioDisponivel(Long id) throws SGAServiceException {
         try {
-            hDao.removerHorarioDisponivel(horarioDisponivel);
-        } catch (Exception e) {
-            throw new SGAServiceException();
-        }
-    }
-
-    public List<HorarioDisponivel> listarHorarioDisponivel() throws SGAServiceException {
-        try {
-            return hDao.listarHorarioDisponivel();
+            hDao.removerHorarioDisponivel(id);
         } catch (Exception e) {
             throw new SGAServiceException();
         }

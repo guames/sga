@@ -9,17 +9,17 @@ import java.util.List;
 
 public interface FinancasDao {
 
+    List<RelatorioFinancasDTO> relatorioFinancas(Date dataInicial, Date dataFinal);
+
+    List<Despesa> listarDespesa();
+
     Despesa salvarDespesa(Despesa despesa);
 
     void removerDespesa(Long id);
 
-    List<Despesa> listarDespesa();
+    List<Receita> listarReceita();
 
     Receita salvarReceita(Receita receita);
 
     void removerReceita(Long id);
-
-    List<Receita> listarReceita();
-
-    List<RelatorioFinancasDTO> relatorioFinancas(Date dataInicial, Date dataFinal);
 }

@@ -6,15 +6,17 @@ import java.util.List;
 
 public interface HorariosDao {
 
+    List<HorarioAgendado> listarHorarioAgendado();
+
     HorarioAgendado salvarHorarioAgendado(HorarioAgendado horarioAgendado);
 
-    void removerHorarioAgendado(HorarioAgendado horarioAgendado);
+    void removerHorarioAgendado(Long id);
 
-    List<HorarioAgendado> listarHorarioAgendado();
+    List<HorarioDisponivel> listarHorarioDisponivel();
 
     HorarioDisponivel salvarHorarioDisponivel(HorarioDisponivel horarioDisponivel);
 
-    void removerHorarioDisponivel(HorarioDisponivel horarioDisponivel);
+    void removerHorarioDisponivel(Long id);
 
-    List<HorarioDisponivel> listarHorarioDisponivel();
+
 }
