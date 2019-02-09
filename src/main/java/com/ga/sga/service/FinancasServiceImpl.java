@@ -26,15 +26,15 @@ public class FinancasServiceImpl implements FinancasService {
         }
     }
 
-    public void removerDespesa(Despesa despesa) throws SGAServiceException {
+    public void removerDespesa(Long id) throws SGAServiceException {
         try {
-            fDao.removerDespesa(despesa);
+            fDao.removerDespesa(id);
         } catch (Exception e) {
             throw new SGAServiceException();
         }
     }
 
-    public List<Despesa> listarDespesa() throws SGAServiceException {
+    public List<Despesa> listarDespesas() throws SGAServiceException {
         try {
             return fDao.listarDespesa();
         } catch (Exception e) {
@@ -50,15 +50,15 @@ public class FinancasServiceImpl implements FinancasService {
         }
     }
 
-    public void removerReceita(Receita receita) throws SGAServiceException {
+    public void removerReceita(Long id) throws SGAServiceException {
         try {
-            fDao.removerReceita(receita);
+            fDao.removerReceita(id);
         } catch (Exception e) {
             throw new SGAServiceException();
         }
     }
 
-    public List<Receita> listarReceita() throws SGAServiceException {
+    public List<Receita> listarReceitas() throws SGAServiceException {
         try {
             return fDao.listarReceita();
         } catch (Exception e) {

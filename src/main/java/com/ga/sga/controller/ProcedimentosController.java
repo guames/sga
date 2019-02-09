@@ -17,7 +17,7 @@ public class ProcedimentosController {
         this.pService = pService;
     }
 
-    @GetMapping("/")
+    @GetMapping("/q")
     public List<Procedimento> listarProcedimento() throws SGAServiceException {
         return pService.listarProcedimento();
     }

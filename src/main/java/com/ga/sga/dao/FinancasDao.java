@@ -11,13 +11,13 @@ public interface FinancasDao {
 
     Despesa salvarDespesa(Despesa despesa);
 
-    void removerDespesa(Despesa despesa);
+    void removerDespesa(Long id);
 
     List<Despesa> listarDespesa();
 
     Receita salvarReceita(Receita receita);
 
-    void removerReceita(Receita receita);
+    void removerReceita(Long id);
 
     List<Receita> listarReceita();
 
