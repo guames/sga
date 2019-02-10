@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>SGA - Sistema de Gerenciamento de Agendamentos</title>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="stylesheet" type="text/css" href="webjars/bootstrap/4.2.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/login.css}"/>
+
+</head>
+<body class="backgroundAll backgroundIndex">
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <h1>SGA</h1>
+        </div>
+
+        <!-- Login Form -->
+        <div th:if="${param.error}">
+            Usuário ou senha inválido.
+        </div>
+        <div th:if="${param.logout}">
+            Você saiu do sistema.
+        </div>
+        <form th:action="@{/login}" method="post">
+            <input type="text" id="username" class="fadeIn second" name="username" placeholder="Login">
+            <input type="password" id="password" class="fadeIn third" name="password" placeholder="Senha">
+            <input type="submit" class="fadeIn fourth" value="Entrar">
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+            <a class="underlineHover" href="#">Perdeu a Senha?</a>
+        </div>
+
+    </div>
+</div>
+
+<script type="text/javascript" src="webjars/jquery/3.3.1/jquery.min.js/"></script>
+<script type="text/javascript" src="webjars/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
