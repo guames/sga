@@ -4,7 +4,7 @@ import com.ga.sga.domain.Usuario;
 import com.ga.sga.exception.SGAServiceException;
 import com.ga.sga.service.UsuariosService;
 import org.springframework.web.bind.annotation.*;
-import java.util.List;
+import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 public class UsuariosController {
@@ -16,8 +16,10 @@ public class UsuariosController {
     }
 
     @GetMapping("/usuarios")
-    public List<Usuario> listarDespesa() throws SGAServiceException {
-        return uService.listarUsuario();
+    public ModelAndView listarUsuario() throws SGAServiceException {
+        ModelAndView modelAndView = new ModelAndView("/usuario/lista");
+        modelAndView.addObject("listaUsuarios",uService.listarUsuario());
+        return modelAndView;
     }
 
     @PutMapping("/usuario")

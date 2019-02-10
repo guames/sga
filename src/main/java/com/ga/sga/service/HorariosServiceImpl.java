@@ -1,24 +1,29 @@
 package com.ga.sga.service;
 
-import com.ga.sga.dao.HorariosDao;
+import com.ga.sga.dao.HorarioAgendadoDao;
+import com.ga.sga.dao.HorarioDisponivelDao;
 import com.ga.sga.domain.HorarioAgendado;
 import com.ga.sga.domain.HorarioDisponivel;
 import com.ga.sga.exception.SGAServiceException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
 public class HorariosServiceImpl implements HorariosService{
 
-    private HorariosDao hDao;
+    private HorarioAgendadoDao hADao;
+    private HorarioDisponivelDao hDDao;
 
-    public HorariosServiceImpl(HorariosDao hDao){
-        this.hDao = hDao;
+    @Autowired
+    public HorariosServiceImpl(HorarioAgendadoDao hADao,HorarioDisponivelDao hDDao){
+        this.hADao = hADao;
+        this.hDDao = hDDao;
     }
 
     public List<HorarioAgendado> listarHorarioAgendado() throws SGAServiceException {
         try {
-            return hDao.listarHorarioAgendado();
+            return (List<HorarioAgendado>) hADao.findAll();
         } catch (Exception e) {
             throw new SGAServiceException(e.getMessage());
         }
@@ -26,7 +31,7 @@ public class HorariosServiceImpl implements HorariosService{
 
     public HorarioAgendado salvarHorarioAgendado(HorarioAgendado horarioAgendado) throws SGAServiceException {
         try {
-            return hDao.salvarHorarioAgendado(horarioAgendado);
+            return hADao.save(horarioAgendado);
         } catch (Exception e) {
             throw new SGAServiceException(e.getMessage());
         }
@@ -34,7 +39,7 @@ public class HorariosServiceImpl implements HorariosService{
 
     public void removerHorarioAgendado(Long id) throws SGAServiceException {
         try {
-            hDao.removerHorarioAgendado(id);
+            hADao.deleteById(id);
         } catch (Exception e) {
             throw new SGAServiceException(e.getMessage());
         }
@@ -42,7 +47,7 @@ public class HorariosServiceImpl implements HorariosService{
 
     public List<HorarioDisponivel> listarHorarioDisponivel() throws SGAServiceException {
         try {
-            return hDao.listarHorarioDisponivel();
+            return (List<HorarioDisponivel>) hDDao.findAll();
         } catch (Exception e) {
             throw new SGAServiceException(e.getMessage());
         }
@@ -50,7 +55,7 @@ public class HorariosServiceImpl implements HorariosService{
 
     public HorarioDisponivel salvarHorarioDisponivel(HorarioDisponivel horarioDisponivel) throws SGAServiceException {
         try {
-            return hDao.salvarHorarioDisponivel(horarioDisponivel);
+            return hDDao.save(horarioDisponivel);
         } catch (Exception e) {
             throw new SGAServiceException(e.getMessage());
         }
@@ -58,7 +63,7 @@ public class HorariosServiceImpl implements HorariosService{
 
     public void removerHorarioDisponivel(Long id) throws SGAServiceException {
         try {
-            hDao.removerHorarioDisponivel(id);
+            hDDao.deleteById(id);
         } catch (Exception e) {
             throw new SGAServiceException(e.getMessage());
         }
