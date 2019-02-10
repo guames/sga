@@ -10,13 +10,13 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class HorariosServiceImpl implements HorariosService{
+public class HorarioServiceImpl implements HorarioService {
 
     private HorarioAgendadoDao hADao;
     private HorarioDisponivelDao hDDao;
 
     @Autowired
-    public HorariosServiceImpl(HorarioAgendadoDao hADao,HorarioDisponivelDao hDDao){
+    public HorarioServiceImpl(HorarioAgendadoDao hADao, HorarioDisponivelDao hDDao){
         this.hADao = hADao;
         this.hDDao = hDDao;
     }

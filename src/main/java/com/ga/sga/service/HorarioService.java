@@ -6,7 +6,7 @@ import com.ga.sga.exception.SGAServiceException;
 
 import java.util.List;
 
-public interface HorariosService {
+public interface HorarioService {
 
     HorarioAgendado salvarHorarioAgendado(HorarioAgendado horarioAgendado) throws SGAServiceException;
 

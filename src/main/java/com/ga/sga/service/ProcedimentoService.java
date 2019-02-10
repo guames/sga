@@ -4,7 +4,7 @@ import com.ga.sga.domain.Procedimento;
 import com.ga.sga.exception.SGAServiceException;
 import java.util.List;
 
-public interface ProcedimentosService {
+public interface ProcedimentoService {
 
     List<Procedimento> listarProcedimento() throws SGAServiceException;
 

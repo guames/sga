@@ -3,16 +3,16 @@ package com.ga.sga.controller;
 import com.ga.sga.domain.HorarioAgendado;
 import com.ga.sga.domain.HorarioDisponivel;
 import com.ga.sga.exception.SGAServiceException;
-import com.ga.sga.service.HorariosService;
+import com.ga.sga.service.HorarioService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController("/horarios")
-public class HorariosController {
+public class HorarioController {
 
-    private HorariosService hService;
+    private HorarioService hService;
 
-    public HorariosController(HorariosService hService) {
+    public HorarioController(HorarioService hService) {
         this.hService = hService;
     }
 

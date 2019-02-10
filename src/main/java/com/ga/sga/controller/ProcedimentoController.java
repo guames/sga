@@ -2,16 +2,16 @@ package com.ga.sga.controller;
 
 import com.ga.sga.domain.Procedimento;
 import com.ga.sga.exception.SGAServiceException;
-import com.ga.sga.service.ProcedimentosService;
+import com.ga.sga.service.ProcedimentoService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-public class ProcedimentosController {
+public class ProcedimentoController {
 
-    private ProcedimentosService pService;
+    private ProcedimentoService pService;
 
-    public ProcedimentosController(ProcedimentosService pService) {
+    public ProcedimentoController(ProcedimentoService pService) {
         this.pService = pService;
     }
 

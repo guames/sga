@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class ProcedimentosServiceImpl implements ProcedimentosService{
+public class ProcedimentoServiceImpl implements ProcedimentoService {
 
     private ProcedimentoDao pDao;
 
-    public ProcedimentosServiceImpl(ProcedimentoDao pDao) {
+    public ProcedimentoServiceImpl(ProcedimentoDao pDao) {
         this.pDao = pDao;
     }
 

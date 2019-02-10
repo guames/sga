@@ -14,13 +14,13 @@ import java.util.Date;
 import java.util.List;
 
 @Service
-public class FinancasServiceImpl implements FinancasService {
+public class FinancaServiceImpl implements FinancaService {
 
     private ReceitaDao rDao;
     private DespesaDao dDao;
 
     @Autowired
-    public FinancasServiceImpl(ReceitaDao rDao, DespesaDao dDao) {
+    public FinancaServiceImpl(ReceitaDao rDao, DespesaDao dDao) {
         this.rDao = rDao;
         this.dDao = dDao;
     }

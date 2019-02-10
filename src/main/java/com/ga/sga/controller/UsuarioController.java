@@ -2,16 +2,16 @@ package com.ga.sga.controller;
 
 import com.ga.sga.domain.Usuario;
 import com.ga.sga.exception.SGAServiceException;
-import com.ga.sga.service.UsuariosService;
+import com.ga.sga.service.UsuarioService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 @RestController
-public class UsuariosController {
+public class UsuarioController {
 
-    private UsuariosService uService;
+    private UsuarioService uService;
 
-    public UsuariosController(UsuariosService uService) {
+    public UsuarioController(UsuarioService uService) {
         this.uService = uService;
     }
 

@@ -4,17 +4,17 @@ import com.ga.sga.domain.Despesa;
 import com.ga.sga.domain.Receita;
 import com.ga.sga.dto.RelatorioFinancasDTO;
 import com.ga.sga.exception.SGAServiceException;
-import com.ga.sga.service.FinancasService;
+import com.ga.sga.service.FinancaService;
 import org.springframework.web.bind.annotation.*;
 import java.util.Date;
 import java.util.List;
 
 @RestController("/financas")
-public class FinancasController {
+public class FinancaController {
 
-    private FinancasService fService;
+    private FinancaService fService;
 
-    public FinancasController(FinancasService fService) {
+    public FinancaController(FinancaService fService) {
         this.fService = fService;
     }
 

@@ -5,7 +5,7 @@ import com.ga.sga.exception.SGAServiceException;
 
 import java.util.List;
 
-public interface UsuariosService {
+public interface UsuarioService {
 
     List<Usuario> listarUsuario() throws SGAServiceException;
 

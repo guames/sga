@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class UsuariosServiceImpl implements UsuariosService{
+public class UsuarioServiceImpl implements UsuarioService {
 
     private UsuarioDao uDao;
 
-    public UsuariosServiceImpl(UsuarioDao uDao) {
+    public UsuarioServiceImpl(UsuarioDao uDao) {
         this.uDao = uDao;
     }
 

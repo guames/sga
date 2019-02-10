@@ -8,7 +8,7 @@ import com.ga.sga.exception.SGAServiceException;
 import java.util.Date;
 import java.util.List;
 
-public interface FinancasService {
+public interface FinancaService {
 
     List<RelatorioFinancasDTO> relatorioFinancas(Date dataInicial, Date dataFinal) throws SGAServiceException;
 
