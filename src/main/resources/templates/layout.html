@@ -1,5 +1,6 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
@@ -11,7 +12,6 @@
     <title>SGA - Sistema de Gerenciamento de Agendamentos</title>
 </head>
 <body>
-
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">SGA</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -24,28 +24,28 @@
                 <a class="nav-link" href="#">Página Inicial<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownUsuarios" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Usuários
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownUsuarios">
                     <a class="dropdown-item" href="#">Listar</a>
                     <a class="dropdown-item" href="#">Cadastrar</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownHorarios" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Horários
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownHorarios">
                     <a class="dropdown-item" href="#">Listar</a>
                     <a class="dropdown-item" href="#">Cadastrar</a>
                 </div>
             </li>
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownRelatorios" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Relatórios
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownRelatorios">
                     <a class="dropdown-item" href="#">Relatório por data</a>
                 </div>
             </li>
@@ -74,13 +74,10 @@
         </form>
     </div>
 </nav>
-
-<div th:fragment="content">
-    &copy; 2016 Footer
+<div>
+    <div layout:fragment="content">Conteúdo</div>
 </div>
 
-
-<!-- include javascript -->
 <script type="text/javascript" src="webjars/jquery/3.3.1/jquery.min.js/"></script>
 <script type="text/javascript" src="webjars/bootstrap/4.2.1/js/bootstrap.min.js"></script>
 

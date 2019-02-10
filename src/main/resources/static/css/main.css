@@ -5,3 +5,11 @@ h1{
 h2{
     color:#FF0000;
 }
+
+#index-page {
+  overflow:hidden;
+}
+
+#index-page img{
+    max-width: 100%;
+}

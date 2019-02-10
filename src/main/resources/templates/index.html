@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorator="layout">
+<head>
+    <title>Início</title>
+</head>
+<body id="index-page">
+<section layout:fragment="content">
+    <img th:src="@{/img/index.jpg}" alt="memorynotfound logo"/>
+</section>
+<footer>
+    <p layout:fragment="footer">This footer will be ignored, as no placeholder for 'footer' layout fragment was prepared in layout template. </p>
+</footer>
+</body>
+</html>
