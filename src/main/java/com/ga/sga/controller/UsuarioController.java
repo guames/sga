@@ -23,12 +23,12 @@ public class UsuarioController {
     }
 
     @PutMapping("/usuario")
-    public Usuario cadastrarDespesa(Usuario usuario) throws SGAServiceException {
+    public Usuario cadastrarUsuario(Usuario usuario) throws SGAServiceException {
         return uService.salvarUsuario(usuario);
     }
 
     @PostMapping("/usuario")
-    public Usuario atualizarDespesa(Usuario usuario) throws SGAServiceException {
+    public Usuario atualizarUsuario(Usuario usuario) throws SGAServiceException {
         return uService.salvarUsuario(usuario);
     }
 
