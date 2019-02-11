@@ -8,13 +8,12 @@ import com.ga.sga.dto.RelatorioFinancasDTO;
 import com.ga.sga.exception.SGAServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
 @Service
-public class FinancaServiceImpl implements FinancaService {
+public class FinancaServiceImpl implements FinancaService{
 
     private ReceitaDao rDao;
     private DespesaDao dDao;
