@@ -2,7 +2,7 @@ package com.ga.sga.service;
 
 import com.ga.sga.domain.Despesa;
 import com.ga.sga.domain.Receita;
-import com.ga.sga.dto.RelatorioFinancasDTO;
+import com.ga.sga.dto.RelatorioFinancaDTO;
 import com.ga.sga.exception.SGAServiceException;
 
 import java.util.Date;
@@ -10,7 +10,7 @@ import java.util.List;
 
 public interface FinancaService {
 
-    List<RelatorioFinancasDTO> relatorioFinancas(Date dataInicial, Date dataFinal) throws SGAServiceException;
+    List<RelatorioFinancaDTO> relatorioFinancas(Date dataInicial, Date dataFinal) throws SGAServiceException;
 
     List<Despesa> listarDespesas() throws SGAServiceException;
 

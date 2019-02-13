@@ -4,7 +4,7 @@ import com.ga.sga.dao.DespesaDao;
 import com.ga.sga.dao.ReceitaDao;
 import com.ga.sga.domain.Despesa;
 import com.ga.sga.domain.Receita;
-import com.ga.sga.dto.RelatorioFinancasDTO;
+import com.ga.sga.dto.RelatorioFinancaDTO;
 import com.ga.sga.exception.SGAServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,7 +24,7 @@ public class FinancaServiceImpl implements FinancaService{
         this.dDao = dDao;
     }
 
-    public List<RelatorioFinancasDTO> relatorioFinancas(Date dataInicial, Date dataFinal) throws SGAServiceException {
+    public List<RelatorioFinancaDTO> relatorioFinancas(Date dataInicial, Date dataFinal) throws SGAServiceException {
         try {
 //            return fDao.relatorioFinancas(dataInicial, dataFinal);
             return new ArrayList<>();

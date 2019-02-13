@@ -2,9 +2,10 @@ package com.ga.sga.controller;
 
 import com.ga.sga.domain.Despesa;
 import com.ga.sga.domain.Receita;
-import com.ga.sga.dto.RelatorioFinancasDTO;
+import com.ga.sga.dto.RelatorioFinancaDTO;
 import com.ga.sga.exception.SGAServiceException;
 import com.ga.sga.service.FinancaService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.Date;
 import java.util.List;
@@ -14,12 +15,13 @@ public class FinancaController {
 
     private FinancaService fService;
 
+    @Autowired
     public FinancaController(FinancaService fService) {
         this.fService = fService;
     }
 
     @GetMapping("/relatorio")
-    public List<RelatorioFinancasDTO> relatorio(Date dataInicial, Date dataFinal) throws SGAServiceException {
+    public List<RelatorioFinancaDTO> relatorio(Date dataInicial, Date dataFinal) throws SGAServiceException {
         return fService.relatorioFinancas(dataInicial, dataFinal);
     }
 

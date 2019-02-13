@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class RelatorioFinancasDTO {
+public class RelatorioFinancaDTO {
 
     private Despesa despesa;
     private Receita receita;

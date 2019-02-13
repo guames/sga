@@ -31,7 +31,7 @@ public class ProcedimentoController {
     }
 
     @DeleteMapping("/procedimento/{id}")
-    public void removerHorarioDisponivel(@RequestParam Long id) throws SGAServiceException {
+    public void removerProcedimento(@RequestParam Long id) throws SGAServiceException {
         pService.removerProcedimento(id);
     }
 }
